@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArrowController : MonoBehaviour
 {
     Transform player;
+    public GameDirector director;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,7 @@ public class ArrowController : MonoBehaviour
         float r2 = 1.0f;
         
         if(d < r1 + r2){
+            director.DecreaseHp();
             Destroy(gameObject);
         }
     }
