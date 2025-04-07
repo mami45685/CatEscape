@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ArrowController : MonoBehaviour
 {
     Transform player;
-    public GameDirector director;
+    GameDirector director;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +39,8 @@ public class ArrowController : MonoBehaviour
 
     public void setPlayer(Transform player){
         this.player=player;
+    }
+    public void setDirector(GameDirector director){
+        this.director= director;
     }
 }

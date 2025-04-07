@@ -26,7 +26,7 @@ public class ArrowGenerator : MonoBehaviour
             int px = Random.Range(-6,7);
             go.transform.position = new Vector3(px,7,0);
             go.GetComponent<ArrowController>().setPlayer(this.player);
-            go.GetComponent<ArrowController>().director=this.director;
+            go.GetComponent<ArrowController>().setDirector(this.director);
        }
     }
 }
